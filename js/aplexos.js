@@ -57,4 +57,9 @@ $(function(){
     footerPosition();
     $(window).resize(footerPosition);
     timedCount();
+
+    // auto to center
+    if (document.documentElement.clientHeight > 738) {
+        $("#sp_spacing_div").height((document.documentElement.clientHeight / 2) - (738 / 2));
+    }
 });
