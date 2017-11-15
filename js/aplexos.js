@@ -14,7 +14,7 @@ function set_DO_Value(img) {
         img.src = "img/led_" + moduleColor + ".png";
     }
 
-    console.log(img.src);
+    // console.log(img.src);
 }
 
 function randomPowerStatus(img) {
@@ -26,8 +26,6 @@ function randomPowerStatus(img) {
             img[0].src = "img/power_gray.png";
         }
     }
-
-    console.log(img[0].src);
 }
 
 function timedCount()
