@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+          margin: 0px;
+          background: #c9caca
+      }
+      
+      .sps_header_css{
+          height: 116px;
+          background-image: url("img/gateway-01.png");
+          background-repeat: repeat-x;
+      }
+
+      .sps_foot_css{
+          height: 34px;
+          background-image: url("img/gateway-03.png");
+          background-repeat: repeat-x;
+      }
+
+      .sps_logo_css{
+          float: right;
+      }
+
+      /* 动态为footer添加类fixed-bottom */
+      .fixed-bottom {
+        position: fixed;
+        bottom: 0;
+        width:100%;
+      }
+
+      table {
+        // border: 1px solid black;
+        color: aliceblue;
+        height:300px; 
+        width:800px; 
+        background-color: #707070;
+        table-layout: fixed; 
+        margin-top: 10px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      table, td {
+        // border: 1px solid black;
+        border-radius:30px;
+        vertical-align:middle; 
+        text-align:center;
+        height: 80px;
+      }
+
+      table td img {
+        width:60px;
+        height: 60px;
+      }
+
+      .sps_img_button:hover {
+        width:65px;
+        height: 65px;
+      }
+
+    </style>
+  </head>
+  <body>
+  
+  <div >
+    <div class="sps_header_css">
+      <img class="sps_logo_css" src="img/gateway-02.png"/>
+    </div>
+    <div style="clear: both;"></div>
+  <div>
+
+  <div align="center">
+    <table>
+      <tr>
+        <td rowspan="3" style="font-size: 25px;">
+          I/O <br>
+          Module 1
+        </td>
+        <td>
+          <img src="img/power_gray.png"/>
+        </td>
+        <td>
+          <img src="img/power_blue.png"/>
+        </td>
+        <td>
+          <img src="img/power_gray.png"/>
+        </td>
+        <td>
+          <img src="img/power_blue.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img class="sps_img_button" src="img/led_green.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_orange.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_blue.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_white.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:60px">
+          PUMP
+        </td>
+        <td style="height:60px">
+          Valve
+        </td>
+        <td style="height:60px">
+          Flowmeter
+        </td>
+        <td style="height:60px">
+          Displacement <br>
+          Meter
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div align="center">
+    <table>
+      <tr>
+        <td rowspan="3" style="font-size: 25px;">
+          I/O <br>
+          Module 2
+        </td>
+        <td>
+          <img src="img/power_blue.png"/>
+        </td>
+        <td>
+          <img src="img/power_gray.png"/>
+        </td>
+        <td>
+          <img src="img/power_blue.png"/>
+        </td>
+        <td>
+          <img src="img/power_gray.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <img class="sps_img_button" src="img/led_green.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_orange.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_blue.png"/>
+        </td>
+        <td>
+          <img class="sps_img_button" src="img/led_white.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td style="height:60px">
+          PUMP
+        </td>
+        <td style="height:60px">
+          Valve
+        </td>
+        <td style="height:60px">
+          Flowmeter
+        </td>
+        <td style="height:60px">
+          Displacement <br>
+          Meter
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <footer>
+    <div class="sps_foot_css" align="center" role="contentinfo">
+      <img class="sps_logo_css" src="img/gateway-04.png"/>
+    </div>
+  </footer>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/aplexos.js"></script>
+  
+  </body>
+</html>
+
