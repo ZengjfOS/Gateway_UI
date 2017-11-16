@@ -4,40 +4,39 @@ function getFileName(filePath){
 }  
 
 function set_DO_Value(img) {
-    var fileName = getFileName(img.src);
-    var imgName = img.name;
-    
-    if (fileName == "led_green.png" || fileName == "led_orange.png" || fileName == "led_blue.png" || fileName == "led_white.png") {
-        img.src = "img/led_gray.png"
-    } else {
-        var moduleColor = imgName.substring(imgName.lastIndexOf("_") + 1);    
-        img.src = "img/led_" + moduleColor + ".png";
-    }
 
     // console.log(img.src);
+    var fileName = getFileName(img.src);
+    if (fileName == "power_gray.png") {
+        img.src = "img/power_blue.png";
+    } else {
+        img.src = "img/power_gray.png";
+    }
 }
 
 function randomPowerStatus(img) {
+
     var fileName = getFileName(img[0].src);
+    var imgName = img[0].name;
+    
     if (((Math.random() * (10 - 1) + 1) / 5) > 1) {
-        if (fileName == "power_gray.png") {
-            img[0].src = "img/power_blue.png";
+        if (fileName == "led_green.png" || fileName == "led_orange.png" || fileName == "led_blue.png" || fileName == "led_white.png") {
+            img[0].src = "img/led_gray.png"
         } else {
-            img[0].src = "img/power_gray.png";
+            var moduleColor = imgName.substring(imgName.lastIndexOf("_") + 1);    
+            img[0].src = "img/led_" + moduleColor + ".png";
         }
     }
 }
 
+color_array = ["green", "orange", "blue", "white"];
+
 function timedCount()
 {
-    for (var i = 0; i < 4; i++)
-    {
-        randomPowerStatus(document.getElementsByName("module1_power_" + (i + 1)));
-    }
 
-    for (var i = 0; i < 4; i++)
-    {
-        randomPowerStatus(document.getElementsByName("module2_power_" + (i + 1)));
+    for (var i = 0; i < color_array.length; i++) {
+        randomPowerStatus(document.getElementsByName("module1_led_" + color_array[i]));
+        randomPowerStatus(document.getElementsByName("module2_led_" + color_array[i])); 
     }
 
     setTimeout("timedCount()",1000);
